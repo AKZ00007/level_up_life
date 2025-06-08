@@ -1,0 +1,63 @@
+name: level_up_life
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^2.27.0
+  firebase_auth: ^4.17.8
+  cloud_firestore: ^4.15.8
+  provider: ^6.1.2
+  intl: ^0.19.0
+  google_fonts: ^6.2.1
+  cupertino_icons: ^1.0.8
+  video_player: ^2.8.6
+  flutter_animate: ^4.5.0
+  audioplayers: ^6.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/videos/background.mp4
+    - assets/videos/background_loop.mp4
+    - assets/icons/achievement.png
+    - assets/icons/home.png
+    - assets/icons/power.png
+    - assets/icons/profile.png
+    - assets/icons/Realm.png
+    - assets/audio/click_sound.mp3
+    - assets/audio/levelUp.mp3
+    - assets/cyber_pattern.png
+    - assets/fonts/Eternal.ttf
+    - assets/fonts/Dark Seed.otf
+    - assets/fonts/DEM-MOMono-300.otf
+    - assets/videos/timer.mp4
+
+  fonts:
+    - family: Eternal
+      fonts:
+        - asset: assets/fonts/Eternal.ttf
+
+    - family: DEM-MOMono
+      fonts:
+        - asset: assets/fonts/DEM-MOMono-300.otf
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/playstore-icon.png"  # <- This must be a single launcher icon image (1024x1024)
+  adaptive_icon_background: "#FFFFFF"             # <- Optional but recommended for Android 8.0+
+  #adaptive_icon_foreground: "assets/icons/playstore-icon-foreground.png"  # Optional, for layered adaptive icons

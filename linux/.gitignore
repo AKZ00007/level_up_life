@@ -1,0 +1,3 @@
+flutter/ephemeral
+# Ignore Firebase configuration files
+lib/firebase_options.dart

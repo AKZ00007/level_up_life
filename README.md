@@ -1,120 +1,162 @@
 # Level Up Life
 
-<p align="center">
-  <em>Gamify your habits, track your progress, and turn your daily routine into an epic RPG.</em>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/platform-android-brightgreen.svg?style=for-the-badge&logo=android" alt="Platform Android">
-  <img src="https://img.shields.io/badge/status-in%20development-blue.svg?style=for-the-badge" alt="Status In Development">
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Made with Flutter">
-  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Powered by Firebase">
-</p>
+> Level Up Life is a mobile application built with Flutter that transforms self-improvement into a captivating role-playing game.  
+> Instead of just ticking off tasks, you'll earn experience points (XP), gain levels, and enhance your character's stats by completing real-life activities.  
+> This project is currently in active development.
 
 ---
 
-### 📽 Demo Video
+## 📽 Demo Video
 
 [Click here to watch the demo](https://drive.google.com/file/d/1rk2hZ10f7D2Yte1DW12k0GBXjRnj2egC/preview)
 
+---
+
+## 📋 Table of Contents
+
+- [✨ Features](#-features)
+- [📸 Screenshots](#-screenshots)
+- [🛠️ Tech Stack & Dependencies](#️-tech-stack--dependencies)
+- [🚀 Getting Started](#-getting-started)
+- [📲 Release](#-release)
+- [📜 License](#-license)
+
+---
+
+## ✨ Features
+
+### 🎮 Gamified Progression System
+
+- **Experience & Leveling**: Gain XP for every completed activity. Watch your character level up and become more powerful.
+- **Dynamic XP Curve**: XP needed for each level increases dynamically for a balanced challenge.
+- **Epic Level-Up Notifications**: Custom-animated, sci-fi-themed popups with sound effects celebrate level-ups.
+- **Character Ranks**: Advance from "Novice Adventurer" to "Mythic Sovereign" with new titles at milestone levels.
+- **Streak System**: Build daily streaks to earn consistency XP.
+- **Streak Savers**: Protect your streaks with special "Streak Saver" rewards every 5 levels after level 20.
+
+### ✅ Activity & Habit Tracking
+
+- **Timed Activities**:
+  - **Strength & Intelligence**: Train with a sci-fi timer. XP awarded only on completion.
+  - **Sub-Activity Selection**: Choose specific workouts or mental tasks (e.g., "Warrior's Workout", "Mind Quest").
+
+- **Health Habits**:
+  - **Water Intake**: Track daily water with cooldown timers.
+  - **Dental Hygiene**: Log brushing with cooldown to prevent abuse.
+
+- **Daily Activity Calendar**:
+  - View logged activities per day on a calendar, backed by Firestore data.
+
+### 🧑‍🚀 Immersive User Interface
+
+- **Futuristic Dark Theme**: Neon glows, animated video backgrounds, sci-fi styling.
+- **Custom Animations**: Built with `flutter_animate` and custom painters.
+- **Sound Effects**: Integrated `SoundManager` handles level-up, button, and success sounds.
+- **Custom Widgets**: Circular timers, progress bars, and stylized UI elements.
+
+### 🧙‍♂️ Advanced Player Profile
+
+- **Gaming-Style Dashboard**: RPG-like character stats screen.
+- **Core Attributes Pentagon**: Radar chart showing Strength, Intelligence, etc.
+- **Activity Calendar**: Interactive and color-coded for consistency tracking.
+- **Player Vitals**: Level, rank, and daily streaks front and center.
+
+---
+
+## 🛠️ Backend & Architecture
+
+### 🔥 Firebase Backend
+
+- **Authentication**: Email/password signup/login.
+- **Cloud Firestore**: Stores levels, XP, streaks, logs in scalable subcollections.
+
+### 🧠 State Management
+
+- **Provider**: Cleanly separates logic from UI using the Provider pattern.
+- **Clean Architecture**: Codebase is structured by feature (`models/`, `providers/`, `widgets/`, `screens/`).
+
+---
+
+## 📸 Screenshots
+
+_Screenshots of the Login Screen, Home Dashboard, Activity Timer, and Profile Screen will be added here soon._
+
+| Login Screen | Home Dashboard |
+|--------------|----------------|
+| *(Image)*    | *(Image)*      |
+
+| Activity Timer | Player Profile |
+|----------------|----------------|
+| *(Image)*      | *(Image)*      |
+
+---
+
+## 🛠️ Tech Stack & Dependencies
+
+### 🔧 Framework
+- **Flutter**
+
+### 🔙 Backend
+- **Firebase Authentication**
+- **Cloud Firestore**
+
+### 🔁 State Management
+- **Provider**
+
+### 📦 Key Packages
+
+- `firebase_core`: Firebase initialization
+- `cloud_firestore`: Firestore DB
+- `firebase_auth`: Auth management
+- `video_player`: Background video support
+- `audioplayers`: Sound effects
+- `flutter_animate`: Advanced animations
+- `intl`: Date formatting
+
+---
+
+## 🚀 Getting Started
+
+To run the project locally:
+
+### ✅ Prerequisites
+
+- Flutter SDK (`v3.0.0` or higher)
+- Code editor (VS Code / Android Studio)
+
+### 🛠️ Installation
+
+1. **Set up Firebase:**
+   - Create a project in [Firebase Console](https://console.firebase.google.com/)
+   - Add Android app → download `google-services.json`
+   - Place it in `android/app/`
+   - Enable Email/Password auth and Firestore in Firebase
+
+2. **Clone the repo:**
+   ```sh
+   git clone https://github.com/YOUR_USERNAME/level_up_life.git
+   cd level_up_life
+
+3. **Install dependencies:**
+   ```sh
+   flutter pub get
+
+4. **Run the app:**
+   ```sh
+   flutter run
 
 
-Level Up Life is a mobile application built with Flutter that transforms self-improvement into a captivating role-playing game. Instead of just ticking off tasks, you'll earn experience points (XP), gain levels, and enhance your character's stats by completing real-life activities. This project is currently in active development.
-📋 Table of Contents
-✨ Features
-Gamified Progression System
-Activity & Habit Tracking
-Immersive User Interface
-Advanced Player Profile
-Backend & Architecture
-📸 Screenshots
-🛠️ Tech Stack & Dependencies
-🚀 Getting Started
-📲 Release
-📜 License
-✨ Features
-Gamified Progression System
-Experience & Leveling: Gain XP for every completed activity. Watch your character level up and become more powerful.
-Dynamic XP Curve: The XP required to reach the next level increases dynamically, providing a balanced challenge.
-Epic Level-Up Notifications: A custom-animated, sci-fi-themed popup announces your new level and title, complete with sound effects.
-Character Ranks: Achieve new titles as you advance through levels, from a "Novice Adventurer" to a "Mythic Sovereign".
-Streak System: Build and maintain a daily activity streak to earn consistency XP.
-Streak Savers: Earn "Streak Savers" at key level milestones (e.g., every 5 levels after level 20) to protect your hard-earned progress.
-Activity & Habit Tracking
-Timed Activities:
-Strength & Intelligence: Engage in focused training sessions using a dedicated, futuristic timer screen. Start, pause, or cancel activities. XP is awarded only upon successful completion.
-Sub-Activity Selection: Choose from a list of specific workouts or mental exercises (e.g., "Warrior's Workout", "Mind Quest").
-Health Habits:
-Water Intake: Log your daily water consumption with a cooldown to encourage consistent hydration throughout the day.
-Dental Hygiene: Track teeth brushing with a cooldown to ensure it's logged appropriately.
-Daily Activity Calendar: A comprehensive calendar on the profile screen visually marks every day you've logged an activity. This data is fetched directly from a dedicated Firestore log.
-Immersive User Interface
-Futuristic Dark Theme: A visually rich UI with animated video backgrounds, neon glows, and a cohesive sci-fi aesthetic.
-Custom Animations: Smooth and engaging animations using flutter_animate and custom painters for a dynamic user experience.
-Sound Effects: An integrated SoundManager provides auditory feedback for clicks, successes, and level-ups, enhancing user immersion.
-Custom Widgets: Features a custom-painted circular timer, a sharp-edged progress bar, and many other unique UI components.
-Advanced Player Profile
-Gaming-Style Dashboard: The profile screen is designed to look like a character stats page from a modern RPG.
-Core Attributes Pentagon: A pentagon chart visually represents your character's core stats (Strength, Intelligence, etc.).
-Detailed Activity Log: The profile features an interactive calendar that highlights all your active days, providing a long-term view of your consistency.
-Player Vitals: Displays your current level, title, and daily streak count prominently.
-Backend & Architecture
-Firebase Backend:
-Firebase Authentication: Secure email & password-based user sign-up and login.
-Cloud Firestore: A scalable NoSQL database used to store all user data, including levels, XP, streaks, and detailed activity logs in a subcollection.
-Provider State Management: Leverages the Provider package to manage app state efficiently, separating business logic from the UI.
-Clean Project Structure: The code is organized by feature and layer (models, providers, screens, widgets), making it scalable and maintainable.
-📸 Screenshots
-(Screenshots of the Login Screen, Home Dashboard, Activity Timer, and Profile Screen will be added here soon.)
-Login Screen	Home Dashboard
-(Image)	(Image)
-Activity Timer	Player Profile
-(Image)	(Image)
-🛠️ Tech Stack & Dependencies
-Framework: Flutter
-Backend: Firebase Authentication, Cloud Firestore
-State Management: Provider
-Key Packages:
-firebase_core: For connecting to the Firebase project.
-cloud_firestore: For database interaction.
-firebase_auth: For user authentication.
-video_player: For animated background videos.
-audioplayers: For sound effects.
-flutter_animate: For stunning UI animations.
-intl: For date formatting.
-🚀 Getting Started
-To get a local copy up and running, follow these simple steps.
-Prerequisites
-Flutter SDK (version 3.0.0 or higher)
-A code editor like VS Code or Android Studio.
-Installation
-Set up a Firebase Project:
-Create a new project on the Firebase Console.
-Add an Android app to your Firebase project. Follow the on-screen instructions to download the google-services.json file.
-Place the google-services.json file in the android/app/ directory of this project.
-In the Firebase console, enable Authentication (with Email/Password provider) and Firestore Database.
-Clone the repository:
-Generated sh
-git clone https://github.com/YOUR_USERNAME/level_up_life.git
-Use code with caution.
-Sh
-Navigate to the project directory:
-Generated sh
-cd level_up_life
-Use code with caution.
-Sh
-Install dependencies:
-Generated sh
-flutter pub get
-Use code with caution.
-Sh
-Run the app:
-Generated sh
-flutter run
-Use code with caution.
-Sh
-📲 Release
-This project is in active development. An official APK for Android will be released for testing and demonstration purposes soon. Stay tuned!
-📜 License
-This project is not yet licensed. You are free to explore the code, but please contact the author for permissions regarding distribution or commercial use. An MIT License will likely be added upon the first official release.
+
+## 📲 Release
+
+This project is in active development.  
+An official APK for Android will be released soon for testing and demonstration purposes. Stay tuned!
+
+---
+
+## 📜 License
+
+This project is **not yet licensed**.  
+You are free to explore the code, but please contact the author for permissions regarding distribution or commercial use.
+
 
